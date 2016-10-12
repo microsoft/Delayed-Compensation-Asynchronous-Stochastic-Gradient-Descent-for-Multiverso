@@ -3,28 +3,35 @@ Custom License
 Licenses for Microsoft Delayed Compensation Asynchronous Stochastic Gradient Descent for the Distributed Machine Learning Toolkit
 Microsoft Delayed Compensation Asynchronous Stochastic Gradient Descent for the Distributed Machine Learning Toolkit (DMTK DC-asgd) can be licensed according to one of the following License Terms:
 
-1. DMTK DC-asgd General License (marked below as “Microsoft Software License Terms”)
-2. DMTK DC-asgd Non-Commercial Usage License (marked below as “Microsoft Research License Terms”)
+- DMTK DC-asgd General License (marked below as “Microsoft Software License Terms”)
+- DMTK DC-asgd Non-Commercial Usage License (marked below as “Microsoft Research License Terms”)
+
 Both Licenses are presented below.
 See the description of the Licenses in DMTK Wiki at https://github.com/microsoft/DMTK/wiki/DMTK-DC-asgd-License
-------------------------------------------------------------------------------------------------------
+
 MICROSOFT SOFTWARE LICENSE TERMS
+--------------------------------
+
 MICROSOFT Delayed Compensation Asynchronous Stochastic Gradient Descent FOR THE Distributed Machine Learning Toolkit
 These license terms are an agreement between Microsoft Corporation (or based on where you live, one of its affiliates) and you. Please read them. They apply to the software named above, which includes the media on which you received it, if any. The terms also apply to any Microsoft
-•	updates,
-•	supplements,
-•	Internet-based services, and
-•	support services
+
+- updates,
+- supplements,
+- Internet-based services, and
+- support services
+
 for this software, unless other terms accompany those items. If so, those terms apply.
 By using the software, you accept these terms. If you do not accept them, do not use the software.
 While you comply with these license terms, you have the rights below.
+
 1.	INSTALLATION AND USE RIGHTS. You may install and use any number of copies of the software on your devices for your use solely with unmodified copies of the Microsoft Distributed Machine Learning Toolkit that Microsoft makes available through https://www.DMTK.io/ or an official Microsoft repository linked from that site (“DMTK”).
 2.	ADDITIONAL LICENSING REQUIREMENTS AND/OR USE RIGHTS.
 a.	Distributable Code. The software contains code that you are permitted to distribute in programs you develop if you comply with the terms below.
-i.	Right to Use and Distribute. The code and text files listed below are “Distributable Code.”
-•	You may distribute the software solely as a single binary comprised of only the software and DMTK. No other distribution is permitted. 
-•	Sample Code. You may modify, copy, and distribute the source and source code form of sample code that is identified by being provided in the Examples directory.
-•	Third Party Distribution. You may permit distributors of your programs that include the software solely as a single binary comprised of only the software and DMTK to copy and distribute the Distributable Code as part of those programs, subject to the terms of this agreement.
+b.	Right to Use and Distribute. The code and text files listed below are “Distributable Code.”
+- You may distribute the software solely as a single binary comprised of only the software and DMTK. No other distribution is permitted. 
+- Sample Code. You may modify, copy, and distribute the source and source code form of sample code that is identified by being provided in the Examples directory.
+- Third Party Distribution. You may permit distributors of your programs that include the software solely as a single binary comprised of only the software and DMTK to copy and distribute the Distributable Code as part of those programs, subject to the terms of this agreement.
+
 ii.	Distribution Requirements. For any Distributable Code you distribute, you must
 •	ensure that the license terms and third party notices that Microsoft provides for the software and DMTK are prominently included for end users; 
 •	require distributors and external end users to agree to terms that protect it at least as much as this agreement; 
