@@ -1,8 +1,10 @@
 Custom License
+--------------
 Licenses for Microsoft Delayed Compensation Asynchronous Stochastic Gradient Descent for the Distributed Machine Learning Toolkit
 Microsoft Delayed Compensation Asynchronous Stochastic Gradient Descent for the Distributed Machine Learning Toolkit (DMTK DC-asgd) can be licensed according to one of the following License Terms:
-•	DMTK DC-asgd General License (marked below as “Microsoft Software License Terms”)
-•	DMTK DC-asgd Non-Commercial Usage License (marked below as “Microsoft Research License Terms”)
+
+1. DMTK DC-asgd General License (marked below as “Microsoft Software License Terms”)
+2. DMTK DC-asgd Non-Commercial Usage License (marked below as “Microsoft Research License Terms”)
 Both Licenses are presented below.
 See the description of the Licenses in DMTK Wiki at https://github.com/microsoft/DMTK/wiki/DMTK-DC-asgd-License
 ------------------------------------------------------------------------------------------------------
