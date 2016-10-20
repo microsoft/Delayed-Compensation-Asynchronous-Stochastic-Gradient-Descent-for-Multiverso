@@ -5,6 +5,8 @@
 // Delayed Compensation Async Stochastic Gradient Descent.
 // See LICENSE.md file in the project root for full license information.
 //
+// See https://arxiv.org/abs/1609.08326 for the details.
+//
 #ifndef MULTIVERSO_UPDATER_DCASGD_UPDATER_H_
 #define MULTIVERSO_UPDATER_DCASGD_UPDATER_H_
 
@@ -28,22 +30,13 @@ namespace multiverso {
 		void Update(size_t num_element, T*data, T*delta,
 			AddOption* option, size_t offset) override {
 			for (size_t index = 0; index < num_element; ++index) {
-				//if (index == 0 && offset == 0)
-				//	Log::Info("da:%f, co:%f, de:%f, lr:%f, lam:%f, ",
-				//	data[index + offset], shadow_copies_[option->worker_id()][index + offset], delta[index],
-				//	option->learning_rate(), option->lambda());
-
 				data[index + offset] -= option->learning_rate() *
-					(delta[index] / option->learning_rate() - option->lambda() *
+					(delta[index] / option->learning_rate() + option->lambda() *
 					std::abs(delta[index] / option->learning_rate()) *
 					(data[index + offset] - shadow_copies_[option->worker_id()][index + offset]));
 
 				// caching each worker's latest version of parameter
 				shadow_copies_[option->worker_id()][index + offset] = data[index + offset];
-				//if (index == 0 && offset == 0)
-				//	fprintf(stderr, "nda:%f, nco:%f\n", data[index + offset], shadow_copies_[option->worker_id()][index + offset]);
-				//if (index == 0 && offset == 0)
-				//	Log::Debug("nda:%f, nco:%f\n", data[index + offset], shadow_copies_[option->worker_id()][index + offset]);
 			}
 		}
 
