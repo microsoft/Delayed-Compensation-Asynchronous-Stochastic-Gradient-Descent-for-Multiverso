@@ -42,12 +42,12 @@ namespace multiverso {
                 T g = delta[index] / option->learning_rate();
 
                 /******************************ASGD*********************************/
-                //data[index + offset] -= option->learning_rate() * g;
+                data[index + offset] -= option->learning_rate() * g;
 
                 /******************************DC-ASGD-c*********************************/
-                data[index + offset] -= option->learning_rate() *
-                	(g + option->lambda() *	g * g *
-                	(data[index + offset] - shadow_copies_[option->worker_id()][index + offset]));
+                //data[index + offset] -= option->learning_rate() *
+                //	(g + option->lambda() *	g * g *
+                //	(data[index + offset] - shadow_copies_[option->worker_id()][index + offset]));
 
 
                 /******************************DC-ASGD-a*********************************/
