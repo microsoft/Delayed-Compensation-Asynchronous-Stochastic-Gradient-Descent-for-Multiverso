@@ -45,18 +45,18 @@ namespace multiverso {
                 //data[index + offset] -= option->learning_rate() * g;
 
                 /******************************DC-ASGD-c*********************************/
-                data[index + offset] -= option->learning_rate() *
-                	(g + option->lambda() *	g * g *
-                	(data[index + offset] - shadow_copies_[option->worker_id()][index + offset]));
+                //data[index + offset] -= option->learning_rate() *
+                //	(g + option->lambda() *	g * g *
+                //	(data[index + offset] - shadow_copies_[option->worker_id()][index + offset]));
 
 
                 /******************************DC-ASGD-a*********************************/
-                //mean_square_[option->worker_id()][index + offset] *= option->momentum();
-                //mean_square_[option->worker_id()][index + offset] += (1 - option->momentum()) * g * g;
-                //data[index + offset] -= option->learning_rate() *
-                //    (g + option->lambda() / sqrt(mean_square_[option->worker_id()][index + offset] + e)*
-                //        g * g *
-                //        (data[index + offset] - shadow_copies_[option->worker_id()][index + offset]));
+                mean_square_[option->worker_id()][index + offset] *= option->momentum();
+                mean_square_[option->worker_id()][index + offset] += (1 - option->momentum()) * g * g;
+                data[index + offset] -= option->learning_rate() *
+                    (g + option->lambda() / sqrt(mean_square_[option->worker_id()][index + offset] + e)*
+                        g * g *
+                        (data[index + offset] - shadow_copies_[option->worker_id()][index + offset]));
 
                 ///******************************ASGD-dev*********************************/
                 //data[index + offset] -= option->learning_rate() *
