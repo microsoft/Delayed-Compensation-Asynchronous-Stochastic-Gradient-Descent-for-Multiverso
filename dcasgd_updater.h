@@ -20,10 +20,10 @@ namespace multiverso {
 	template <typename T>
 	class DCASGDUpdater : public Updater<T> {
 	public:
-		explicit DCASGDUpdater(size_t size, bool isPipeline) :
+		explicit DCASGDUpdater(size_t size) :
 			size_(size){
 			Log::Debug("[DC-ASGDUpdater] Init. \n");
-			shadow_copies_.resize(isPipeline ? MV_NumWorkers() * 2 : MV_NumWorkers(), std::vector<T>(size_));
+			shadow_copies_.resize(MV_NumWorkers(), std::vector<T>(size_));
 			smooth_gradient_.resize(size_);
 		}
 
