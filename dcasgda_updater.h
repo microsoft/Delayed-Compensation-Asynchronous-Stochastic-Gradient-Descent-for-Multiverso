@@ -45,7 +45,7 @@ namespace multiverso {
 			}
 		}
 
-		~DCASGDUpdater(){
+		~DCASGDAUpdater(){
 			shadow_copies_.clear();
 			mean_square_.clear();
 		}
