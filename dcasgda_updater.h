@@ -29,7 +29,7 @@ namespace multiverso {
 
 		void Update(size_t num_element, T*data, T*delta,
 			AddOption* option, size_t offset) override {
-			float e = 1e-10;
+			float e = 1e-7;
 			for (size_t index = 0; index < num_element; ++index) {
 				T g = delta[index] / option->learning_rate();
 
